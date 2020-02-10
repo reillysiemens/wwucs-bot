@@ -9,7 +9,7 @@ description = ""
 authors = ["Reilly Tucker Siemens <reilly@tuckersiemens.com>"]
 license = "ISC"
 packages = [
-    { include = "wwucs" , from = "src" },
+    { include = "wwucs",  from = "src" },
 ]
 
 [tool.poetry.dependencies]
@@ -17,6 +17,7 @@ python = "^3.8"
 
 [tool.poetry.dev-dependencies]
 tox = "^3.14.3"
+tox-gh-actions = "^0.3.0"
 
 [tool.tox]
 legacy_tox_ini = """
@@ -76,4 +77,8 @@ deps =
 commands_pre =
 commands =
     sphinx-build -b html docs {posargs:docs/_build/html}
+
+[gh-actions]
+python =
+    3.8: py38, static, docs
 """
