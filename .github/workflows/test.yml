@@ -22,3 +22,9 @@ jobs:
         run: |
           source $HOME/.poetry/env
           poetry run tox -q --parallel=auto
+      - name: Post code coverage results
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+        run: |
+          pip install 'coveralls<2'
+          coveralls
