@@ -13,6 +13,10 @@ Release v\ |release|. (:ref:`Changelog <changelog>`)
     :target: https://coveralls.io/github/reillysiemens/wwucs-bot
     :alt: Coveralls code coverage
 
+.. image:: https://img.shields.io/badge/code%20style-black-black?style=flat-square
+    :target: https://github.com/psf/black
+    :alt: Any color you like
+
 A Slack bot for the WWUCS community.
 
 Project Info
